@@ -1,6 +1,6 @@
 <h1 class="mb-4"> All Books</h1>
 
-<!-- Feature 4.1 - Simple Search Form -->
+<!-- 4.1 -->
 <div class="row mb-4">
   <div class="col-md-6">
     <%= form_with url: books_path, method: :get, local: true do |f| %>
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<!-- Feature 5.2 - ERB Conditional -->
+<!--  5.2 - -->
 <% if @books.empty? %>
   <div class="alert alert-warning">
     No books found matching your search. <br>

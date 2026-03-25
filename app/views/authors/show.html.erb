@@ -6,7 +6,6 @@
 
 <h3>Books by <%= @author.name %></h3>
 
-<!-- Feature 5.2 - ERB Conditional -->
 <% if @books.empty? %>
   <p class="text-muted">No books found for this author.</p>
 <% else %>
