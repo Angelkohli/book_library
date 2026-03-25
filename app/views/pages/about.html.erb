@@ -1,0 +1,46 @@
+<h1>About This App</h1>
+<p class="lead">The Book Library app lets you browse and search a collection of books and their authors.</p>
+
+<hr>
+
+<h2>Data Sources</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-3">
+      <div class="card-header bg-primary text-white">Data Source 1 — Faker Gem</div>
+      <div class="card-body">
+        <p>Author data (names, nationalities, and bios) is generated using the <strong>Faker Ruby gem</strong>.</p>
+        <p>The Faker gem creates realistic fake data and is commonly used for testing and seeding databases.</p>
+        <p><strong>Data structure:</strong> name (string), nationality (string), bio (text)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-3">
+      <div class="card-header bg-success text-white">Data Source 2 — CSV File</div>
+      <div class="card-body">
+        <p>Book data is loaded from a <strong>CSV file</strong> stored at <code>db/seeds/books.csv</code>.</p>
+        <p>The CSV contains titles, genres, descriptions, and publication years for 50 well-known books.</p>
+        <p><strong>Data structure:</strong> title (string), genre (string), description (text), published_year (integer)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2>Database Schema</h2>
+<p>The two datasets are related through a <strong>one-to-many</strong> relationship:</p>
+<ul>
+  <li>One <strong>Author</strong> can have many <strong>Books</strong></li>
+  <li>Each <strong>Book</strong> belongs to one <strong>Author</strong></li>
+</ul>
+
+
+
+<p>Total records in database: 
+  <strong>Authors: <%= Author.count %></strong>, 
+  <strong>Books: <%= Book.count %></strong>
+</p>
